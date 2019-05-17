@@ -16,7 +16,6 @@ public class PlayerCamera : MonoBehaviour
 
     public bool CameraDisabled = false;
 
-
     void Start()
     {
         //Getting Transforms
@@ -33,16 +32,6 @@ public class PlayerCamera : MonoBehaviour
 
     void Update()
     {
-        //Locking and unlocking cursor
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            Cursor.lockState = CursorLockMode.None;
-            CameraDisabled = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.Mouse0)) {
-            Cursor.lockState = CursorLockMode.Locked;
-            CameraDisabled = false;
-        }
-
         //Getting Mouse Movement
         if (!CameraDisabled)
         {
